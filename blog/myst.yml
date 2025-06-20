@@ -12,7 +12,7 @@ project:
     q2doc-api-target: https://develop.qiime2.org/en/latest/
     q2doc-usage-target: https://use.qiime2.org/en/latest/
     q2doc-library-target: https://library.qiime2.org
-    q2doc-amplicon-target: https://amplicon-docs.readthedocs.io/en/latest/
+    q2doc-amplicon-target: https://amplicon-docs.qiime2.org/en/latest/
 
   plugins:
     - type: executable
@@ -20,17 +20,7 @@ project:
 
   toc:
     - file: intro.md
-    - file: tutorial.md
-
-    - title: References
-      children:
-        - title: Plugin Reference
-          children:
-              - pattern: plugin-reference/plugins/*.md
-        - title: Artifact Classes and Formats
-          children:
-            - pattern: plugin-reference/artifacts/*.md
-
+    - file: 2025-06-11-stacks.md
 
   downloads:
     - file: _static/environment.yml

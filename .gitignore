@@ -1,6 +1,7 @@
-book/references/plugin-reference
-book/references/q2doc.bib
-book/_build/
-book/data/
+blog/references/plugin-reference
+blog/references/q2doc.bib
+blog/_static/environment.yml
+blog/_build/
+blog/data/
 .locks/
 .DS_Store

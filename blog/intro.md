@@ -14,7 +14,7 @@ Are you looking for:
 - information about the author? See [https://cap-lab.bio](https://cap-lab.bio).
 
 Otherwise, if you're specifically looking for *rachis project news*, you're in the right place.
-[Read on... 📖](#tutorial)
+Read on... 📖
 :::
 
 ## License
