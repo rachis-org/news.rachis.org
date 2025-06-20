@@ -1,0 +1,9 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 87f724d
+_src_path: https://github.com/gregcaporaso/q2docs-template
+author_website: https://cap-lab.bio
+book_author: Greg Caporaso
+book_id: news.rachis.org
+book_title: rachis project news
+book_type: Plugin documentation
+plugin_name: news.rachis.org
