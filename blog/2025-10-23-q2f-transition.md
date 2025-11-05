@@ -55,6 +55,8 @@ We expect to transition the `qiime2` Python package in time for the 2026.1 relea
 Documentation changes will follow in *Developing with QIIME 2* and *Using QIIME 2* later in 2026, as will changes to websites and any reorganization on the QIIME 2 Forum.
 As mentioned above, users and developers should barely notice this change, but our hope is that it improves clarity in our documentation and helps in our development of future funding for the projects.
 
+While we make the transition, keep an eye on the [QIIME 2 / `rachis` news feed](https://qiime2.org/news/) for new information.
+
 ## `rachis` leadership
 
 The `rachis` project is led by:
