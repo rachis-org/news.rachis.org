@@ -1,6 +1,6 @@
 # Announcing `rachis`, a rebrand of the QIIME 2 Framework (Q2F)
 
-As you may or may not know, the QIIME 2 microbiome data science platform is built on what we call the QIIME 2 Framework (Q2F).
+As you may or may not know, the QIIME 2 microbiome data science platform is built on what was[^was-called] called [the QIIME 2 Framework (Q2F)](https://qiime2.org).
 Q2F provides the general purpose functionality that gives QIIME 2 a lot of its power, including data provenance tracking, the Python API, the artifact class system, the parallel computing framework, the artifact cache, and more.[^q2f-code]
 
 QIIME 2's amplicon data analysis functionality, for example, builds on Q2F, providing domain-specific analysis tools in the form of plugins.
@@ -74,4 +74,5 @@ We expect this change will usher in an exciting new era for the project, and we 
 
 See you on the QIIME 2 Forum! 🍇
 
-[^q2f-code]: The Q2F codebase is that found at https://github.com/qiime2/qiime2.
+[^was-called]: Until [29 October 2025](https://forum.qiime2.org/t/announcing-rachis-a-rebrand-of-the-qiime-2-framework-q2f/33749).
+[^q2f-code]: The Q2F codebase is the one found at https://github.com/qiime2/qiime2.
