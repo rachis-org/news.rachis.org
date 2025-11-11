@@ -1,3 +1,4 @@
+(q2f-transition)=
 # Announcing `rachis`, a rebrand of the QIIME 2 Framework (Q2F)
 
 As you may or may not know, the QIIME 2 microbiome data science platform is built on what was[^was-called] called [the QIIME 2 Framework (Q2F)](https://qiime2.org).
