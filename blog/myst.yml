@@ -20,8 +20,10 @@ project:
 
   toc:
     - file: intro.md
-    - file: 2025-06-11-stacks.md
+    - file: 2025-01-04-artifinder.md
     - file: 2025-10-23-q2f-transition.md
+    - file: 2025-06-11-stacks.md
+
 
   downloads:
     - file: _static/environment.yml
