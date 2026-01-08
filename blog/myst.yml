@@ -10,7 +10,7 @@ project:
   # github:
   references:
     q2doc-api-target: https://develop.qiime2.org/en/latest/
-    q2doc-usage-target: https://use.qiime2.org/en/latest/
+    rachis-user-glossary: https://use.qiime2.org/en/latest/
     q2doc-library-target: https://library.qiime2.org
     q2doc-amplicon-target: https://amplicon-docs.qiime2.org/en/latest/
 
@@ -20,8 +20,10 @@ project:
 
   toc:
     - file: intro.md
-    - file: 2025-06-11-stacks.md
+    - file: 2025-01-04-artifinder.md
     - file: 2025-10-23-q2f-transition.md
+    - file: 2025-06-11-stacks.md
+
 
   downloads:
     - file: _static/environment.yml
