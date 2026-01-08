@@ -1,7 +1,7 @@
 (announcing-artifinder)=
 # Need to figure out where you left off last year? Try artifinder!
 
-Happy New Year QIIME 2 Forum! 🎉
+Happy New Year! 🎉
 
 If you're like me, you may be getting back to work this week and trying to remember where you left off with your analyses.
 To help with this, I built a little utility that, when provided with a specific [`Result`](xref:rachis-user-glossary#term-result) (i.e., an `Artifact` or `Visualization`; referred to here as the *target*), and a directory to search (referred to here as the *search directory*), will locate all [`Artifacts`](xref:rachis-user-glossary#term-artifact) in the target's provenance that are in the search directory.
