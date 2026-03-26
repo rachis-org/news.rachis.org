@@ -4,7 +4,7 @@
 Happy New Year! 🎉
 
 If you're like me, you may be getting back to work this week and trying to remember where you left off with your analyses.
-To help with this, I built a little utility that, when provided with a specific [`Result`](xref:rachis-user-glossary#term-result) (i.e., an `Artifact` or `Visualization`; referred to here as the *target*), and a directory to search (referred to here as the *search directory*), will locate all [`Artifacts`](xref:rachis-user-glossary#term-artifact) in the target's provenance that are in the search directory.
+To help with this, I built a little utility that, when provided with a specific [`Result`](#term-result) (i.e., an `Artifact` or `Visualization`; referred to here as the *target*), and a directory to search (referred to here as the *search directory*), will locate all [`Artifacts`](#term-artifact) in the target's provenance that are in the search directory.
 It will report back to you with the full path to each of the `Results` that it found, and list the `Results` that it didn't find (because they are not in the search directory).
 
 ## The problem
