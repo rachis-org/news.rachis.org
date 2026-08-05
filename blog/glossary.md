@@ -28,6 +28,12 @@ conda metapackage
   They are typically used to collect several packages together into a single package via dependencies.
   ([source](https://docs.conda.io/projects/conda-build/en/stable/resources/commands/conda-metapackage.html))
 
+data provenance
+: In the context of {term}`rachis`, data provenance refers to the information automatically recorded on the steps taken to generate a specific {term}`Result`.
+  This information ensures transparency and reproducibility of analyses, and is also helpful for providing technical support to users.
+  Data provenance information is recorded as metadata inside of {term}`qza` and {term}`qzv` files.
+  It is most commonly reviewed using [QIIME 2 View](https://view.qiime2.org) or the {term}`q2cli` commands `qiime tools view` or `qiime tools replay-provenance` (the latter of which uses [provenance replay](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011676)).
+
 deployment
 : An installation of QIIME 2 as well as zero-or-more {term}`interfaces <Interface>` and {term}`plugins <Plugin>`.
   The collection of interfaces and plugins in a deployment can be defined by a {term}`distribution` of QIIME 2.
@@ -80,8 +86,8 @@ Python 3 API
   This allows advanced users to access all QIIME 2 analytic functionality directly in Python.
   This can be very convenient for developing tools that use QIIME 2 as a component, or for performing data analysis without writing intermediary data artifacts to disk unless you specifically want to.
 
-q2cli
-: [q2cli](https://github.com/qiime2/q2cli) is the original (and still primary, as of March 2024) command line interface for QIIME 2.
+QIIME 2 Framework
+: See {term}`rachis`.
 
 qza
 : An acronym for **Q**IIME **Z**ipped **A**rtifact.
@@ -90,6 +96,15 @@ qza
 qzv
 : An acronym for **Q**IIME **Z**ipped **V**isualization.
   See {term}`visualization`.
+
+q2cli
+: [q2cli](https://github.com/qiime2/q2cli) is the original (and still primary, as of March 2024) command line interface for QIIME 2.
+
+rachis
+: The software framework that QIIME 2, MOSHPIT, and all {term}`plugins <plugin>` are built on.
+  `rachis` provides general purpose functionality for biological data science tools, like support for different {term}`interfaces <interface>` and {term}`data provenance` tracking.
+  Generally speaking, users do not need to know that they are interacting with `rachis`, but if your use of tools that built on it expands having some basic knowledge of `rachis` functionality will allow you to more quickly learn new tools.
+  `rachis` was [formerly referred to as the QIIME 2 Framework](https://news.rachis.org/en/latest/2025-10-23-q2f-transition/).
 
 result
 : A general term for an {term}`artifact` or a {term}`visualization`.
