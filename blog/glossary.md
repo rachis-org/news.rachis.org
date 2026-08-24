@@ -17,11 +17,20 @@ artifact
   When written to file, artifacts typically have the extension {term}`qza`.
   Artifacts can be provided as input to QIIME 2 {term}`actions <action>` or exported from QIIME 2 for use with other software.
 
+artifact class
+: A type of {term}`artifact` that can exist in the {term}`rachis` ecosystem.
+  Examples of a artifact classes include `FeatureTable[Frequency]` and `DistanceMatrix`.
+  Every artifact has a single, immutable artifact class which defines the data that it contains (i.e., it's semantic type) and the file format that it uses for storing its data internally.
+  The class of a given artifact can be discovered by loading it with QIIME 2 View or calling `qiime tools peek`, and all {term}`actions <action>` define what artifact classes (if any) they take as input, and which artifact classes (if any) they generate as output.
+
 breaking change
 : A *breaking change* is a change to how a program works (for example, a QIIME 2 plugin or interface) that introduces an incompatibility with earlier versions of the program.
   This will generally require that users make some modification to how they were using some aspect of a system.
   For example, if a plugin method added a new required input in version 2, that would be a breaking change with respect to version 1: calling the method without that new parameter would fail in version 2, but would have succeeded with version 1.
   This may also be called a backward incompatible change or an API change.
+
+collection
+: Collections are groupings of one or more {term}`rachis` {term}`artifacts <artifact>` that are used as input or generated as output from {term}`actions <action>`.
 
 conda metapackage
 : A metapackage is a package with no files, only metadata.
@@ -32,7 +41,7 @@ data provenance
 : In the context of {term}`rachis`, data provenance refers to the information automatically recorded on the steps taken to generate a specific {term}`Result`.
   This information ensures transparency and reproducibility of analyses, and is also helpful for providing technical support to users.
   Data provenance information is recorded as metadata inside of {term}`qza` and {term}`qzv` files.
-  It is most commonly reviewed using [QIIME 2 View](https://view.qiime2.org) or the {term}`q2cli` commands `qiime tools view` or `qiime tools replay-provenance` (the latter of which uses [provenance replay](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011676)).
+  It is most commonly reviewed using [QIIME 2 View](https://view.qiime2.org) or the {term}`q2cli` commands `qiime tools view` or `qiime tools replay-provenance` (the latter of which uses {term}`provenance replay`.
 
 deployment
 : An installation of QIIME 2 as well as zero-or-more {term}`interfaces <Interface>` and {term}`plugins <Plugin>`.
@@ -52,14 +61,61 @@ epoch
 : An identifier referencing a release cycle of QIIME 2.
   Epochs identifiers represent dates (e.g., `2024.10` references the release cycle initiated in October of 2024).
 
+even sampling depth
+: In studies based on DNA/RNA sequencing data, a {term}`sequencing depth` that is user-selected to perform analysis at.
+  Normalizing to that depth, for example using {term}`rarefaction` is essential for some (but not all) analyses.
+
+export
+: As used in the {term}`rachis` ecosystem, exporting is the process of unpacking data from {term}`artifacts <artifact>` into their constituent data files for use outside of `rachis`.
+  When data are exported, {term}`data provenance` tracking terminates and the user is responsible for tracking their own analysis steps.
+  Learn more [here](https://amplicon-docs.qiime2.org/en/stable/how-to-guides/how-to-export/).
+
+feature
+: An entity observed in a study.
+  Presence, absence, or abundance of features are generally used to describe the composition of {term}`samples <sample>`.
+  *Feature* is an intentionally general term, and depending on the data type in use can refer an amplicon sequence variant (ASV), a specific taxonomic group, a functional gene category, a class of metabolite, or something else.
+  Along with *samples*, *features* define one of the two axes in the `FeatureTable` {term}`artifact class` and are a central concept in the {term}`rachis` ecosystem.
+
+feature identifier
+: See {term}`identifier`.
+
+feature metadata
+: See {term}`metadata`.
+
+Galaxy
+: Galaxy is an open source, web-based platform for data intensive biomedical research.
+  {term}`rachis` plugins can be used through a graphical interface with Galaxy, either on locally hosted hardware (see [here](https://use.qiime2.org/en/stable/how-to-guides/use-the-galaxy-container/)) or on a public Galaxy server (see https://cancer.usegalaxy.org).
+
+identifier
+: As used in the {term}`rachis` ecosystem, identifiers are unique labels for {term}`samples <sample>` and {term}`features <feature>`.
+  [Chase *et al.* (2016)](https://doi.org/10.1128/msystems.00010-15) discusses considerations when defining identifiers, and more `rachis`-specific recommendations can be found in the [metadata file format documentation](https://use.qiime2.org/en/stable/references/metadata/#identifier-recommendations).
+
+import
+: As used in the {term}`rachis` ecosystem, importing is the process of loading data into {term}`artifacts <artifact>`, at which point {term}`data provenance` tracking begins and the data is assigned an {term}`artifact class`.
+  Learn more [here](https://amplicon-docs.qiime2.org/en/stable/how-to-guides/how-to-import/).
+
 interface
 : The layer of QIIME 2 that users (either humans or other computer software) interact with.
-  {term}`q2cli` and the {term}`Python 3 API` are the two interfaces covered in *Using QIIME 2*.
-  Other interfaces include *Galaxy* (see https://cancer.usegalaxy.org) and Adagio (more info on that soon!).
+  {term}`q2cli` and the {term}`Python 3 API` are the two interfaces covered in [*Using `rachis`*](https://use.rachis.org), and tutorials such as [gut-to-soil](https://amplicon-docs.qiime2.org/en/stable/tutorials/gut-to-soil/) and [*Moving Pictures*](https://amplicon-docs.qiime2.org/en/stable/tutorials/moving-pictures/) additionally document use through {term}`Galaxy`.
+
+library plugin
+: See {term}`stand-alone plugin`.
+
+metadata
+: Study-specific information, generally focused on either {term}`samples <sample>` or {term}`features <feature>`.
+  Metadata about samples is referred to as *sample metadata* and metadata about features is referred to as *feature metadata*, as discussed in more detail [here](https://use.qiime2.org/en/stable/explanations/metadata/).
+  The shared file format for sample and feature metadata is described [here](https://use.qiime2.org/en/stable/references/metadata/).
+  {term}`Artifacts <artifact>` of many {term}`classes <artifact class>` can be [viewed as metadata](https://use.qiime2.org/en/stable/how-to-guides/artifacts-as-metadata/), a powerful approach that broadly expands the types of analyses that are available in {term}`rachis`.
+  Metadata is indexed on {term}`identifiers <identifier>`, and within a study identifiers must be unique (i.e., representing one entity).
 
 method
 : A type of QIIME 2 {term}`action` that takes one or more {term}`artifacts <artifact>` or {term}`parameters <parameter>` as input, and produces one or more {term}`artifacts <artifact>` as output.
-  For example, the `filter-features` {term}`action` in the `q2-feature-table` {term}`plugin` is a {term}`method`.
+  For example, the [`filter-features`](https://library.qiime2.org/plugins/qiime2/q2-feature-table/overview#q2-action-feature-table-filter-features) {term}`action` in the `q2-feature-table` {term}`plugin` is a {term}`method`.
+
+MOSHPIT
+: A {term}`distribution` of microbiome metagenome analysis related {term}`rachis` plugins.
+  This has previously been referred to as the *metagenome distribution distribution* and the *shotgun distribution*.
+  To learn more, see https://moshpit.qiime2.org.
 
 note
 : A type of {term}`annotation` that can be added to a QIIME 2 {term}`result`.
@@ -72,22 +128,43 @@ parameter
 pipeline
 : A type of QIIME 2 {term}`action` that typically combines two or more other {term}`actions <action>`.
   A pipeline takes one or more {term}`artifacts <artifact>` or {term}`parameters <parameter>` as input, and produces one or more {term}`results <result>` ({term}`artifacts <artifact>` and/or {term}`visualizations <visualization>`) as output.
-  For example, the `core-metrics` {term}`action` in the `q2-diversity` {term}`plugin` is a {term}`pipeline`.
+  For example, the [`kmer-diversity`](https://library.qiime2.org/plugins/qiime2/q2-boots/overview#q2-action-boots-kmer-diversity) {term}`action` in the `q2-boots` {term}`plugin` is a {term}`pipeline`.
+
+primitive type
+: A type assigned to a {term}`parameter` to an {term}`action`.
+  These are generally simple input values, such as an integer, a string, or a boolean value, as opposed to more complex data passed as input to actions through {term}`artifacts <artifact>`.
+
+provenance replay
+: `rachis` functionality that enables generation of new executable code from a {term}`Result's <result>` embedded {term}`data provenance`.
+  Provenance replay can be helpful for generating detailed bioinformatics methods text, or for adapting commands used to generate one or more Results to a new data set.
+  Learn more in [Keefe *et al.*, (2023)](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011676).
 
 plugin
 : A plugin provides analysis functionality in the form of {term}`actions <action>`.
   All plugins can be accessed through all interfaces.
   Plugins can be developed and distributed by anyone.
-  As of this writing, a collection of plugins that are installed together are referred to as a distribution.
-  Additional plugins can be installed, and the primary resource enabling discovery of additional plugins is the [QIIME 2 Library](https://library.qiime2.org).
+  A collection of plugins that are installed together are referred to as a distribution, and example of distributions include QIIME 2, MOSHPIT, and tiny.
+  Plugins that are not included in existing distributions can be discovered on the [QIIME 2 Library](https://library.qiime2.org), and as a result these are typically referred to as {term}`library plugins <library plugin>`.
 
 Python 3 API
 : QIIME 2's Application Programmer Interface.
   This allows advanced users to access all QIIME 2 analytic functionality directly in Python.
   This can be very convenient for developing tools that use QIIME 2 as a component, or for performing data analysis without writing intermediary data artifacts to disk unless you specifically want to.
 
+QIIME 2
+: A {term}`distribution` of microbiome amplicon analysis related {term}`rachis` plugins.
+  As this was the first {term}`rachis` distribution, the term was overloaded as discussed [here](https://news.rachis.org/en/latest/2025-10-23-q2f-transition/).
+  This has also previously been referred to as the *amplicon distribution* and the *core distribution*.
+  To learn more, see https://amplicon-docs.qiime2.org.
+
 QIIME 2 Framework
 : See {term}`rachis`.
+
+QIIME 2 Library
+: See {term}`rachis-library`.
+
+QIIME 2 View
+: See {term}`rachis-view`.
 
 qza
 : An acronym for **Q**IIME **Z**ipped **A**rtifact.
@@ -105,12 +182,38 @@ rachis
   `rachis` provides general purpose functionality for biological data science tools, like support for different {term}`interfaces <interface>` and {term}`data provenance` tracking.
   Generally speaking, users do not need to know that they are interacting with `rachis`, but if your use of tools that built on it expands having some basic knowledge of `rachis` functionality will allow you to more quickly learn new tools.
   `rachis` was [formerly referred to as the QIIME 2 Framework](https://news.rachis.org/en/latest/2025-10-23-q2f-transition/).
+  The name *rachis* is preferentially stylized in monospace font: `rachis`.
+
+rachis-library
+: A website for discovering diverse resources for the {term}`rachis` ecosystem, including plugins, data resources, documentation, and workshop information.
+  This site was formerly referred to as the QIIME 2 Library (as of this writing on 24 August 2026, rebranding is still in progress).
+  rachis-library can be found at https://library.rachis.org.
+
+rachis-view
+: A website for viewing {term}`artifacts <artifact>`, {term}`visualizations <visualization>`, {term}`data provenance`, and other information from rachis {term}`results <result>`.
+  This was formerly referred to as QIIME 2 View.
+  rachis-view can be found at https://view.rachis.org.
+
+rarefaction
+: In -omics studies based on DNA/RNA sequencing data, the process of iteratively resampling to a user-specified {term}`even sampling depth`.
+  This differs from the practice of *rarefying*, in that rarefying represents a single iteration of rarefaction.
+  You can learn more in [Raspet *et al.* (2024)](https://doi.org/10.12688/f1000research.156295.1).
 
 result
 : A general term for an {term}`artifact` or a {term}`visualization`.
 
 sample
 : An individual unit of study in an analysis.
+  Along with *features*, *samples* define one of the two axes in the `FeatureTable` {term}`artifact class` and are a central concept in the {term}`rachis` ecosystem.
+
+sample identifier
+: See {term}`identifier`.
+
+sample metadata
+: See {term}`metadata`.
+
+sequencing depth
+: In -omics studies based on DNA/RNA sequencing data, this generally refers to the number of sequences obtained for a given sample.
 
 signature
 : A type of {term}`annotation` that can be added to a QIIME 2 {term}`result`.
@@ -118,8 +221,13 @@ signature
   This allows for identity confirmation for who created a particular {term}`result`.
 
 stand-alone plugin
-:  A plugin that is not included in one of the primary QIIME 2 distributions, but rather is installed independently.
-   These often include cutting edge functionality, and can be discovered through the [QIIME 2 Library](https://library.qiime2.org).
+:  A plugin that is not installed by default in any {term}`distribution`, but rather is installed independently.
+   These often include cutting edge functionality.
+   These are generally discovered through the [QIIME 2 Library](https://library.qiime2.org), and are therefore sometimes referred to as *library plugins*, but not all stand-alone plugins are distributed on the QIIME 2 Library.
+   You may also hear these referred to as *third-party* plugins.
+
+third-party plugin:
+: See {term}`stand-alone plugin`.
 
 tl;dr
 :  "Too long; didn't read."
@@ -127,7 +235,7 @@ tl;dr
 
 visualizer
 : A type of QIIME 2 {term}`action` that takes one or more {term}`artifacts <artifact>` or {term}`parameters <parameter>` as input, and produces exactly one {term}`visualization` as output.
-  For example, the `summarize` {term}`action` in the `q2-feature-table` {term}`plugin` is a {term}`visualizer`.
+  For example, the [`scatterplot-2d`](https://library.qiime2.org/plugins/qiime2/q2-vizard/overview#q2-action-vizard-scatterplot-2d) {term}`action` in the `q2-vizard` {term}`plugin` is a {term}`visualizer`.
 
 visualization
 : Visualizations are QIIME 2 {term}`results <result>` that represent terminal output in an analysis, meaning that they are generated by QIIME 2 and intended to be consumed by a human (as opposed to being consumed by QIIME 2 or other software).
