@@ -34,5 +34,8 @@ preview: _copy-env-file _build-preview _copy-data
 serve:
 	npx serve blog/_build/html/ -p 4000
 
+live: _copy-env-file
+	cd blog && jupyter book start
+
 clean:
 	rm -rf blog/_build/html/
