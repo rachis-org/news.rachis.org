@@ -41,7 +41,7 @@ data provenance
 : In the context of {term}`rachis`, data provenance refers to the information automatically recorded on the steps taken to generate a specific {term}`Result`.
   This information ensures transparency and reproducibility of analyses, and is also helpful for providing technical support to users.
   Data provenance information is recorded as metadata inside of {term}`qza` and {term}`qzv` files.
-  It is most commonly reviewed using {term}`rachis-view` or the {term}`q2cli` commands `qiime tools view` or `qiime tools replay-provenance` (the latter of which uses {term}`provenance replay`).
+  It is most commonly reviewed using {term}`rachis-view` or the {term}`rachis-cli` commands `qiime tools view` or `qiime tools replay-provenance` (the latter of which uses {term}`provenance replay`).
 
 deployment
 : An installation of {term}`rachis` as well as zero-or-more {term}`interfaces <Interface>` and {term}`plugins <Plugin>`.
@@ -96,7 +96,7 @@ import
 
 interface
 : The layer of {term}`rachis` that users (either humans or other computer software) interact with.
-  {term}`q2cli` and the {term}`Python 3 API` are the two interfaces covered in [*Using `rachis`*](https://use.rachis.org), and tutorials such as [gut-to-soil](https://amplicon-docs.qiime2.org/en/stable/tutorials/gut-to-soil/) and [*Moving Pictures*](https://amplicon-docs.qiime2.org/en/stable/tutorials/moving-pictures/) additionally document use through {term}`Galaxy`.
+  {term}`rachis-cli` and the {term}`Python 3 API` are the two interfaces covered in [*Using `rachis`*](https://use.rachis.org), and tutorials such as [gut-to-soil](https://amplicon-docs.qiime2.org/en/stable/tutorials/gut-to-soil/) and [*Moving Pictures*](https://amplicon-docs.qiime2.org/en/stable/tutorials/moving-pictures/) additionally document use through {term}`Galaxy`.
 
 library plugin
 : See {term}`stand-alone plugin`.
@@ -152,7 +152,7 @@ Python 3 API
   This can be very convenient for developing tools that use `rachis` as a component, or for performing data analysis without writing intermediary data artifacts to disk unless you specifically want to.
 
 q2cli
-: [q2cli](https://github.com/qiime2/q2cli) is the original (and still primary, as of March 2024) command line interface for {term}`rachis`.
+: See {term}`rachis-cli`.
 
 QIIME 2
 : A {term}`distribution` of microbiome amplicon analysis related {term}`rachis` plugins.
@@ -183,6 +183,14 @@ rachis
   Generally speaking, users do not need to know that they are interacting with `rachis`, but if your use of tools that are built on it expands, having some basic knowledge of `rachis` functionality will allow you to more quickly learn new tools.
   `rachis` was [formerly referred to as the QIIME 2 Framework](https://news.rachis.org/en/latest/2025-10-23-q2f-transition/).
   The name *rachis* is preferentially stylized in monospace font: `rachis`.
+
+rachis-cli
+: [rachis-cli](https://github.com/rachis-org/rachis-cli/) is the original and primary command line interface for {term}`rachis`.
+  Beginning with the 2026.10 release, the `qiime` and `mosh` commands will be aliases of the `rachis` command, which is the base command for `rachis-cli`.
+  In a QIIME 2 environment, calling `qiime --help` will be the equivalent of calling `rachis --help`; in a MOSHPIT environment, calling `mosh --help` will be the equivalent of calling `rachis --help`.
+  `rachis` can be used across all {term}`deployments <deployment>`, so general purpose documentation such as that in [*Using `rachis`*](https://use.rachis.org) will be updated to illustrate command line calls using `rachis` instead of `qiime`.
+  If you work across deployments, calling `rachis` instead of `qiime` or `mosh` allows you to always use the same base command.
+  `rachis-cli` was formerly referred to as q2cli.
 
 rachis-library
 : A website for discovering diverse resources for the {term}`rachis` ecosystem, including plugins, data resources, documentation, and workshop information.
