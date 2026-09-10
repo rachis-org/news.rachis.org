@@ -234,6 +234,11 @@ stand-alone plugin
   These are generally discovered through {term}`rachis-library`, and are therefore sometimes referred to as *library plugins*, but not all stand-alone plugins are distributed on rachis-library.
   You may also hear these referred to as *third-party* plugins.
 
+SQL
+: SQL (Structured Query Language) is the standard language for defining, querying, and manipulating data in relational databases, where information is organized into tables of rows and columns.
+  The SQL `where` clause allows for selection of rows or columns from these tables, and is used in various places in QIIME 2 for selecting identifiers from {term}`metadata`.
+  One resource (of many) for learning the SQL `where` clause syntax is: https://www.w3schools.com/sql/sql_where.asp.
+
 third-party plugin
 : See {term}`stand-alone plugin`.
 
@@ -250,5 +255,8 @@ visualization
 visualizer
 : A type of {term}`action` that takes one or more {term}`artifacts <artifact>` or {term}`parameters <parameter>` as input, and produces exactly one {term}`visualization` as output.
   For example, the [`scatterplot-2d`](https://library.qiime2.org/plugins/qiime2/q2-vizard/overview#q2-action-vizard-scatterplot-2d) {term}`action` in the `q2-vizard` {term}`plugin` is a {term}`visualizer`.
+
+where clause
+: See {term}`SQL`.
 
 :::
