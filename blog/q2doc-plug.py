@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # ----------------------------------------------------------------------------
-# Copyright (c) 2025, Caporaso Lab (https://cap-lab.bio).
+# Copyright (c) 2025, Caporaso Lab (https://caplab.dev).
 #
 # Distributed under the terms of the Modified BSD License.
 #

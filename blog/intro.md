@@ -11,7 +11,7 @@ Are you looking for:
 - learning resources for microbiome metagenome analysis? See the [MOSHPIT documentation](https://moshpit.qiime2.org).
 - installation instructions, plugins, books, videos, workshops, or resources? See the [QIIME 2 Library](https://library.qiime2.org).
 - general help? See the [QIIME 2 Forum](https://forum.qiime2.org)
-- information about the author? See [https://cap-lab.bio](https://cap-lab.bio).
+- information about the author? See [https://caplab.dev](https://caplab.dev).
 
 Otherwise, if you're specifically looking for *rachis project news*, you're in the right place.
 Read on... 📖
@@ -19,4 +19,4 @@ Read on... 📖
 
 ## License
 
- *rachis project news* (©2025) by [Greg Caporaso](https://cap-lab.bio) is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en).
+ *rachis project news* (©2025–present) by [Greg Caporaso](https://caplab.dev) is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en).
