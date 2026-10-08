@@ -2,7 +2,7 @@
 
 :::{tip} Are you in the right place?
 
-This is *rachis project news*, a collection of articles about the rachis project (formerly known as the QIIME 2 Framework).
+This is *`rachis` project news*, a collection of articles about the `rachis` project (formerly known as the QIIME 2 Framework).
 If you're looking to get started with QIIME 2, or for general information about the project, there are better resources.
 
 Are you looking for:
@@ -13,10 +13,10 @@ Are you looking for:
 - general help? See the [QIIME 2 Forum](https://forum.qiime2.org)
 - information about the author? See [https://caplab.dev](https://caplab.dev).
 
-Otherwise, if you're specifically looking for *rachis project news*, you're in the right place.
+Otherwise, if you're specifically looking for *`rachis` project news*, you're in the right place.
 Read on... 📖
 :::
 
 ## License
 
- *rachis project news* (©2025–present) by [Greg Caporaso](https://caplab.dev) is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en).
+ *`rachis` project news* (©2025–present) by [Greg Caporaso](https://caplab.dev) is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en).
