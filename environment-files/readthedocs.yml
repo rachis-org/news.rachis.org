@@ -1,11 +1,11 @@
 channels:
-- https://packages.qiime2.org/qiime2/2025.7/tiny/passed
+- https://packages.qiime2.org/qiime2/latest/tiny/passed/
 - conda-forge
 - bioconda
 dependencies:
-  - qiime2-tiny
+  - rachis-tiny
   - nodejs
   - pip
   - pip:
-    - q2doc@git+https://github.com/qiime2/q2doc@dev
+    - git+https://github.com/rachis-org/rachis-doc@dev
     - jupyter-book
