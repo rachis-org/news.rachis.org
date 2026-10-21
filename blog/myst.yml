@@ -9,7 +9,7 @@ project:
   # authors: ["Greg Caporaso"]
   # github:
   references:
-    rachis-library-target: https://library.qiime2.org
+    rachis-library-target: https://library.rachis.org
 
   plugins:
     - type: executable

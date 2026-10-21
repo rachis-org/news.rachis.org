@@ -110,7 +110,7 @@ metadata
 
 method
 : A type of {term}`action` that takes one or more {term}`artifacts <artifact>` or {term}`parameters <parameter>` as input, and produces one or more {term}`artifacts <artifact>` as output.
-  For example, the [`filter-features`](https://library.qiime2.org/plugins/qiime2/q2-feature-table/overview#q2-action-feature-table-filter-features) {term}`action` in the `q2-feature-table` {term}`plugin` is a {term}`method`.
+  For example, the [`filter-features`](https://library.rachis.org/plugins/qiime2/q2-feature-table/overview#q2-action-feature-table-filter-features) {term}`action` in the `q2-feature-table` {term}`plugin` is a {term}`method`.
 
 MOSHPIT
 : A {term}`distribution` of microbiome metagenome analysis related {term}`rachis` plugins.
@@ -128,7 +128,7 @@ parameter
 pipeline
 : A type of {term}`action` that typically combines two or more other {term}`actions <action>`.
   A pipeline takes one or more {term}`artifacts <artifact>` or {term}`parameters <parameter>` as input, and produces one or more {term}`results <result>` ({term}`artifacts <artifact>` and/or {term}`visualizations <visualization>`) as output.
-  For example, the [`kmer-diversity`](https://library.qiime2.org/plugins/qiime2/q2-boots/overview#q2-action-boots-kmer-diversity) {term}`action` in the `q2-boots` {term}`plugin` is a {term}`pipeline`.
+  For example, the [`kmer-diversity`](https://library.rachis.org/plugins/qiime2/q2-boots/overview#q2-action-boots-kmer-diversity) {term}`action` in the `q2-boots` {term}`plugin` is a {term}`pipeline`.
 
 plugin
 : A plugin provides analysis functionality in the form of {term}`actions <action>`.
@@ -158,7 +158,7 @@ QIIME 2
 : A {term}`distribution` of microbiome amplicon analysis related {term}`rachis` plugins.
   As this was the first {term}`rachis` distribution, the term was overloaded as discussed [here](https://news.rachis.org/en/latest/2025-10-23-q2f-transition/).
   This has also previously been referred to as the *amplicon distribution* and the *core distribution*.
-  To learn more, see https://amplicon-docs.qiime2.org.
+  To learn more, see https://docs.qiime2.org.
 
 QIIME 2 Framework
 : See {term}`rachis`.
@@ -254,7 +254,7 @@ visualization
 
 visualizer
 : A type of {term}`action` that takes one or more {term}`artifacts <artifact>` or {term}`parameters <parameter>` as input, and produces exactly one {term}`visualization` as output.
-  For example, the [`scatterplot-2d`](https://library.qiime2.org/plugins/qiime2/q2-vizard/overview#q2-action-vizard-scatterplot-2d) {term}`action` in the `q2-vizard` {term}`plugin` is a {term}`visualizer`.
+  For example, the [`scatterplot-2d`](https://library.rachis.org/plugins/qiime2/q2-vizard/overview#q2-action-vizard-scatterplot-2d) {term}`action` in the `q2-vizard` {term}`plugin` is a {term}`visualizer`.
 
 where clause
 : See {term}`SQL`.
