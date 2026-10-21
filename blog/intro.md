@@ -7,9 +7,9 @@ If you're looking to get started with QIIME 2, or for general information about 
 
 Are you looking for:
 - the QIIME 2 homepage? That's [https://qiime2.org](https://qiime2.org).
-- learning resources for microbiome marker gene (i.e., amplicon) analysis? See the [QIIME 2 *amplicon distribution* documentation](https://amplicon-docs.qiime2.org).
+- learning resources for microbiome marker gene (i.e., amplicon) analysis? See the [QIIME 2 documentation](https://docs.qiime2.org).
 - learning resources for microbiome metagenome analysis? See the [MOSHPIT documentation](https://moshpit.qiime2.org).
-- installation instructions, plugins, books, videos, workshops, or resources? See the [QIIME 2 Library](https://library.qiime2.org).
+- installation instructions, plugins, books, videos, workshops, or resources? See [rachis-library](https://library.rachis.org).
 - general help? See the [QIIME 2 Forum](https://forum.qiime2.org)
 - information about the author? See [https://caplab.dev](https://caplab.dev).
 
