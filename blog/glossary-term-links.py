@@ -20,11 +20,15 @@ NAME = 'glossary-term-links'
 def add_links(node):
     # MyST assigns glossary term ids (html_id) during the document stage, so
     # this runs at the project stage, after they exist.
+    # The theme prepends the site's base URL to link urls, so the url names
+    # the glossary page (blog/glossary.md); the plugin input doesn't say
+    # which page it is. (A crossReference node avoids that, but the theme
+    # then shows a hover preview of the term's own definition.)
     if node.get('type') == 'definitionTerm' and node.get('html_id'):
-        node['children'].append(
-            {'type': 'link', 'url': f'#{node["html_id"]}',
-             'title': 'Link to this term',
-             'children': [{'type': 'text', 'value': ' #'}]})
+        node['children'] += [
+            {'type': 'text', 'value': ' '},
+            {'type': 'link', 'url': f'/glossary#{node["html_id"]}',
+             'children': [{'type': 'text', 'value': '#'}]}]
     for child in node.get('children', []):
         add_links(child)
 
