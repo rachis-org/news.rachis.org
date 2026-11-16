@@ -2,13 +2,13 @@
 # Learn QIIME 2 with the all-new gut-to-soil tutorial
 
 I'm excited to share the all new [*Gut-to-Soil Microbiome Axis Tutorial*](https://amplicon-docs.qiime2.org/en/stable/tutorials/gut-to-soil/), which went live with the [2026.10 release of QIIME 2](https://forum.qiime2.org/t/qiime-2-2026-10-is-now-available/34362).
-This is intended to be the primary entry point for new QIIME 2 users to learn an amplicon analysis workflow, and it allow you to follow along with a full marker gene analysis on real microbiome data from a recent study ([Meilander *et al.* (2025)](https://doi.org/10.1093/ismeco/ycaf089)) to illustrate how you can use QIIME 2 in your own work.
+This is intended to be the primary entry point for new QIIME 2 users to learn an amplicon analysis workflow, and it allows you to follow along with a full marker gene analysis on real microbiome data from a recent study ([Meilander *et al.* (2025)](https://doi.org/10.1093/ismeco/ycaf089)) to illustrate how you can use QIIME 2 in your own work.
 
 There are a few exciting new features that I'd like to highlight here.
 
 First, as the tutorial works from demultiplexed sequencing data through statistics and visualizations, it tracks a constructed data set through the analysis in 21 figures, **allowing you to visualize the data as it moves through the workflow**.
 That is often difficult to achieve because the data we're working with is too large to view directly, but it is hugely helpful for understanding an analysis workflow.
-For example, Figure 11 presents three feature tables: an original and two rarefied variants of it.
+For example, Figure 11 presents three feature tables: an original and two [rarefied](#term-rarefaction) variants of it.
 If you ever find yourself wondering something like *What does this `FeatureTable[Frequency]` thing that the QIIME 2 documentation is referring to actually look like?*, this tutorial will help you understand!
 
 ```{figure} ./_static/images/gut-to-soil-even-sampling.jpeg
@@ -31,7 +31,7 @@ New functionality is introduced throughout the tutorial, including [building a G
 And, when paired with the [QIIME 2 Workshop Docker Container](https://use.qiime2.org/en/stable/how-to-guides/use-the-workshop-container/), this is a great resource for running your own training events.
 This container provides convenient functionality built-in, including:
 - a JupyterLab server that provides a consistent interface to all workshop participants (regardless of their host operating system); and
-- QIIME 2 View, so your participants can double click on a `.qzv` file and have it open directly in their web browser.
+- {term}`QIIME 2 View`, so your participants can double click on a `.qzv` file and have it open directly in their web browser.
 
 When your workshop participants go home, they'll have a working installation of QIIME 2 on their computer that they can take with them to continue their learning or jump into their own data analysis.
 
@@ -40,7 +40,7 @@ In addition to [the website](https://amplicon-docs.qiime2.org/en/stable/tutorial
 (Generally I recommend the website though as it is easier to copy/paste commands from and will be updated regularly with new versions of QIIME 2.)
 
 Thanks to all of the co-authors on the pre-print for making this happen!
-If you have any feedback, please feel free to let us know.
+If you have any feedback, please feel free to [let us know](https://forum.qiime2.org/t/learn-qiime-2-with-the-all-new-gut-to-soil-tutorial/34387).
 
 Happy QIIMEing!
 
