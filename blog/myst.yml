@@ -35,5 +35,6 @@ site:
   options:
       folders: true
       favicon: _static/favicon.ico
-      logo: _static/logo.png
+      logo: _static/rachis-logo-lightmode.png
+      logo_dark: _static/rachis-logo-darkmode.png
       pretty_urls: false
