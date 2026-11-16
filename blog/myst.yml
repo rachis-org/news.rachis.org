@@ -19,6 +19,7 @@ project:
 
   toc:
     - file: intro.md
+    - file: 2026-11-10-gut-to-soil-tutorial.md
     - file: 2026-04-21-ai-policy.md
     - file: 2026-01-04-artifinder.md
     - file: 2025-10-23-q2f-transition.md
